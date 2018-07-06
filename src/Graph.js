@@ -170,7 +170,10 @@ class Graph extends Component {
                     //Calcolo costo di elaborazione nel nodo
                     if (lastExecution > packet.timeSent) {
                         currentlyNode.packets.forEach((packet2, index2) => {
-                            if (index2 === index - 1) packet.stringExplanation = _.cloneDeep(packet2.stringExplanation);
+                            if (index2 === index - 1) {
+                                packet.stringExplanation = _.cloneDeep(packet2.stringExplanation);
+                                packet.stringExplanation.pop();
+                            }
                         })
                         packet.stringExplanation.push(packet.weightPacket.toString() + "/" + percorsoAttuale.weight.toString());
                         packet.stringExplanation.push(percorsoAttuale.delay.toString());
@@ -371,6 +374,7 @@ class Graph extends Component {
     render() {
         let listItems = null;
         if (this.finalPacket.length > 0) {
+            _.orderBy(this.finalPacket, ['id'])
             listItems = this.finalPacket.map((item, index) => {
                 let finalString = "";
                 item.stringExplanation.forEach((s, index) => {
@@ -382,8 +386,8 @@ class Graph extends Component {
                     <td>{item.id}</td>
                     <td>{item.from}</td>
                   <td>{item.to}</td>    
-                  <td>{item.timeSent}</td>
-                  <td>{finalString}</td>
+                  <td>{item.timeSent.toFixed(5)}</td>
+                  {/*<td>{finalString}</td>*/}
                 </tr>);
               });
         } else {
@@ -443,8 +447,8 @@ class Graph extends Component {
                     <tr key={index}>
                         <td>{item.source}</td>
                         <td>{item.target}</td>
-                        <td>{item.delay * 1000}</td>
                         <td>{item.weight}</td>
+                        <td>{item.delay * 1000}</td>
                         <td onClick={ () => this.deleteLink(item, index)}><Glyphicon glyph="trash" /></td>
                     </tr>);
             });
@@ -553,7 +557,7 @@ class Graph extends Component {
         <th>Nodo sorgente</th>
       <th>Nodo destinazione</th>
       <th>Tempo totale</th>
-        <th>Calcoli</th>
+        {/*<th>Calcoli</th>*/}
     </tr>
   </thead>
   <tbody>

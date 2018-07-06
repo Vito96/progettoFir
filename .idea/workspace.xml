@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f0160a1-8b78-49e6-b8ed-aeaf66665e11" name="Default" comment="" />
+    <list default="true" id="9f0160a1-8b78-49e6-b8ed-aeaf66665e11" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -13,12 +16,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Graph.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="377" column="95" selection-start-line="377" selection-start-column="95" selection-end-line="377" selection-end-column="95" />
+            <state relative-caret-position="141">
+              <caret line="559" column="17" selection-start-line="559" selection-end-line="560" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -29,7 +32,7 @@
       <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
+            <state relative-caret-position="400">
               <caret line="139" column="45" selection-start-line="139" selection-start-column="38" selection-end-line="139" selection-end-column="45" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
@@ -41,7 +44,7 @@
       <file leaf-file-name="inet-henge.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/library/inet-henge.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2057">
+            <state relative-caret-position="350302">
               <caret line="20606" column="64" selection-start-line="20606" selection-start-column="64" selection-end-line="20606" selection-end-column="64" />
             </state>
           </provider>
@@ -50,7 +53,7 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../inet-henge/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
+            <state relative-caret-position="2618">
               <caret line="154" column="7" selection-start-line="152" selection-start-column="5" selection-end-line="154" selection-end-column="7" />
             </state>
           </provider>
@@ -60,9 +63,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>handle</find>
-      <find>handlehide</find>
-      <find>handleHideNodes</find>
       <find>deletelinks</find>
       <find>deleteLink</find>
       <find>returnChild</find>
@@ -86,11 +86,17 @@
       <find>forea</find>
       <find>weigth</find>
       <find>listItems</find>
-      <find>calcola</find>
       <find>s</find>
       <find>select</find>
       <find>items</find>
+      <find>capacit</find>
+      <find>orderBy</find>
+      <find>calcola</find>
+      <find>index</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -118,15 +124,18 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="6" />
-    <option name="width" value="452" />
-    <option name="height" value="745" />
+    <option name="x" value="1358" />
+    <option name="y" value="-321" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,7 +152,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -192,34 +200,35 @@
       <option name="presentableId" value="Default" />
       <updated>1530784913963</updated>
       <workItem from="1530784915263" duration="18879000" />
+      <workItem from="1530869870971" duration="2514000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18879000" />
+    <option name="totallyTimeSpent" value="21393000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="1358" y="-321" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17650159" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20031299" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info id="npm" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.1325431" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,9 +238,43 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6290">
+          <caret line="377" column="95" selection-start-line="377" selection-start-column="95" selection-end-line="377" selection-end-column="95" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2244">
+          <caret line="139" column="45" selection-start-line="139" selection-start-column="38" selection-end-line="139" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/library/inet-henge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350302">
+          <caret line="20606" column="64" selection-start-line="20606" selection-start-column="64" selection-end-line="20606" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../inet-henge/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
+        <state relative-caret-position="2618">
+          <caret line="154" column="7" selection-start-line="152" selection-start-column="5" selection-end-line="154" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../inet-henge/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2618">
           <caret line="154" column="7" selection-start-line="152" selection-start-column="5" selection-end-line="154" selection-end-column="7" />
         </state>
       </provider>
@@ -241,7 +284,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/library/inet-henge.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2057">
+        <state relative-caret-position="350302">
           <caret line="20606" column="64" selection-start-line="20606" selection-start-column="64" selection-end-line="20606" selection-end-column="64" />
         </state>
       </provider>
@@ -251,7 +294,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
+        <state relative-caret-position="400">
           <caret line="139" column="45" selection-start-line="139" selection-start-column="38" selection-end-line="139" selection-end-column="45" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
@@ -261,8 +304,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="377" column="95" selection-start-line="377" selection-start-column="95" selection-end-line="377" selection-end-column="95" />
+        <state relative-caret-position="141">
+          <caret line="559" column="17" selection-start-line="559" selection-end-line="560" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
