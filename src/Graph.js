@@ -1,7 +1,6 @@
 import React, {
     Component
 } from 'react';
-import './css/Graph.css';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import _ from 'lodash';
