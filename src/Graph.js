@@ -126,7 +126,7 @@ class Graph extends Component {
             });
             return Object.assign({}, currentlyNode);
         }
-        
+
 
         this.calcola = (p, nameFather, dataWork) => {
             const currentlyNode = returnNode(p, dataWork);
@@ -172,14 +172,44 @@ class Graph extends Component {
 
                     //Calcolo costo di elaborazione nel nodo
                     if (lastExecution > packet.timeSent) {
-                        currentlyNode.packets.forEach((packet2, index2) => {
-                            if (packet2.id === packet.id - 1) {
-                                packet.stringExplanation = _.cloneDeep(packet2.stringExplanation);
-                                packet.stringExplanation.pop();
+                        const packetsForFather = _.filter(currentlyNode.packets, p => {
+                            let isForFather = false;
+                            for(let i = 0; i< p.percorso.length; i++) {
+                                if (p.percorso[i] === currentlyNode.name && p.percorso[i + 1] === nameFather) {
+                                    isForFather = true;
+                                }
                             }
+                            return isForFather;
+                        });
+                        const index = _.findIndex(packetsForFather, p => {
+                            return p.id === packet.id;
                         })
+
+
+                        // packetsForFather.forEach((packet2, index2) => {
+                        //         if (packet2.id === packet.id - 1) {
+                        //             packet.stringExplanation = _.cloneDeep(packet2.stringExplanation);
+                        //             packet.algebricExplanation = _.cloneDeep(packet2.algebricExplanation);
+                        //             packet.stringExplanation.pop();
+                        //             packet.algebricExplanation.pop();
+                        //         }
+                        // })
+
+                        if (index > 0) {
+                            packet.stringExplanation = _.cloneDeep(packetsForFather[index - 1].stringExplanation);
+                            packet.algebricExplanation = _.cloneDeep(packetsForFather[index - 1].algebricExplanation);
+                            packet.stringExplanation.pop();
+                            packet.algebricExplanation.pop();
+                        }
+
+
+
                         packet.stringExplanation.push(packet.weightPacket.toString() + "/" + percorsoAttuale.weight.toString());
                         packet.stringExplanation.push(percorsoAttuale.delay.toString());
+
+                        packet.algebricExplanation.push("L(" + packet.id + ")/C(" + percorsoAttuale.source + "," + percorsoAttuale.target +")");
+                        packet.algebricExplanation.push("τ(" + percorsoAttuale.source + "," + percorsoAttuale.target + ")");
+
 
                         packet.time = lastExecution + packet.weightPacket / percorsoAttuale.weight;
                         lastExecution = packet.time;
@@ -187,6 +217,9 @@ class Graph extends Component {
                     } else {
                         packet.stringExplanation.push(packet.weightPacket.toString() + "/" + percorsoAttuale.weight.toString());
                         packet.stringExplanation.push(percorsoAttuale.delay.toString());
+
+                        packet.algebricExplanation.push("L(" + packet.id + ")/C(" + percorsoAttuale.source + "," + percorsoAttuale.target +")");
+                        packet.algebricExplanation.push("τ(" + percorsoAttuale.source + "," + percorsoAttuale.target + ")");
 
                         //Calcolo costo di elaborazione nel nodo
                         packet.time = packet.timeSent + packet.weightPacket / percorsoAttuale.weight;
@@ -200,6 +233,7 @@ class Graph extends Component {
                 let lastExecution = 0;
                 currentlyNode.packets.forEach((packet, index) => {
                     packet.stringExplanation = [];
+                    packet.algebricExplanation = [];
                     let percorsoAttuale = undefined;
                     _.forEach(dataWork.links, link => {
                         if (link.target === nameFather && link.source === currentlyNode.name) {
@@ -211,12 +245,15 @@ class Graph extends Component {
 
                     currentlyNode.packets.forEach((packet2, index2) => {
                         if (index2 < index) {
-                            packet.stringExplanation.push(packet2.weightPacket.toString() + "/" + percorsoAttuale.weight.toString())
+                            packet.stringExplanation.push(packet2.weightPacket.toString() + "/" + percorsoAttuale.weight.toString());
+                            packet.algebricExplanation.push("L(" + packet2.id + ")/C(" + percorsoAttuale.source + "," + percorsoAttuale.target +")");
                         } else if (index2 === index) {
-                            packet.stringExplanation.push(packet.weightPacket.toString() + "/" + percorsoAttuale.weight.toString())
+                            packet.stringExplanation.push(packet.weightPacket.toString() + "/" + percorsoAttuale.weight.toString());
+                            packet.algebricExplanation.push("L(" + packet.id + ")/C(" + percorsoAttuale.source + "," + percorsoAttuale.target +")");
                         }
                     });
                     packet.stringExplanation.push(percorsoAttuale.delay.toString());
+                    packet.algebricExplanation.push("τ(" + percorsoAttuale.source + "," + percorsoAttuale.target + ")");
                     // Calcolo costo di elaborazione nel nodo
                     packet.time = lastExecution + packet.weightPacket / percorsoAttuale.weight;
                     lastExecution = packet.time;
@@ -386,13 +423,22 @@ class Graph extends Component {
                    finalString = finalString + s;
                    if (index < item.stringExplanation.length - 1) finalString = finalString + " + ";
                 });
+
+                let finalStringAlgebric = "";
+                item.algebricExplanation.forEach((s, index) => {
+                    finalStringAlgebric = finalStringAlgebric + s;
+                    if (index < item.stringExplanation.length - 1) finalStringAlgebric = finalStringAlgebric + " + ";
+                });
+
                 return (
                 <tr key={index}>
                     <td>{item.id}</td>
                     <td>{item.from}</td>
-                  <td>{item.to}</td>    
+                  <td>{item.to}</td>
                   <td>{item.timeSent.toFixed(5)}</td>
                   <td>{finalString}</td>
+                    <td>{finalStringAlgebric}</td>
+
                 </tr>);
               });
         } else {
@@ -464,7 +510,7 @@ class Graph extends Component {
                 </td>
             </tr>;
         }
-      
+
 
         let options = this.options;
         return (<div>
@@ -522,7 +568,7 @@ class Graph extends Component {
                 </Row>
                 <Row>
                     <Col sm={4}> Destinazione:
-        
+
                     </Col>
                     <Col sm={8}>
                     <Select name="verso" value={ this.state.verso } onChange={ this.handleChangeVerso } options={ options } />
@@ -530,7 +576,7 @@ class Graph extends Component {
                 </Row>
                 <Row>
                     <Col sm={4}> Peso pacchetto in bit:
-        
+
                     </Col>
                     <Col sm={8}>
                     <input type="number" name="weightPacket" value={ this.state.weightPacket } onChange={ this.handleChange } />
@@ -543,7 +589,7 @@ class Graph extends Component {
                 </Row>
             </Grid>
             <Button onClick={ this.organizzaPacchetti }> Calcola</Button>
-            
+
             <Modal
           show={this.state.show}
           onHide={this.handleHide}
@@ -562,7 +608,8 @@ class Graph extends Component {
         <th>Nodo sorgente</th>
       <th>Nodo destinazione</th>
       <th>Tempo totale</th>
-        <th>Calcoli</th>
+        <th>Calcoli numerici</th>
+        <th>Formule: L = Peso pacchetto con indice, C = Capacità link, τ = Ritardo</th>
     </tr>
   </thead>
   <tbody>
@@ -575,7 +622,7 @@ class Graph extends Component {
             <Button onClick={this.handleHide}>Chiudi</Button>
           </Modal.Footer>
         </Modal>
-          
+
         <Modal
           show={this.state.showModalPackets}
           onHide={this.handleHidePackets}
