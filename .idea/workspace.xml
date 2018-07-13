@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f0160a1-8b78-49e6-b8ed-aeaf66665e11" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildOLD/asset-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildOLD/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildOLD/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildOLD/library/cola.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildOLD/library/dijkstra.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildOLD/library/inet-henge.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildOLD/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildOLD/service-worker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildOLD/static/css/main.0d0dcc07.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildOLD/static/css/main.0d0dcc07.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildOLD/static/js/main.ae916cc7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildOLD/static/js/main.ae916cc7.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildOLD/zip.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/Graph.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,7 +20,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Graph.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Graph.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Graph.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
@@ -65,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            <state relative-caret-position="374">
+              <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -157,6 +141,7 @@
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/css/Graph.css" />
         <option value="$PROJECT_DIR$/src/Graph.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -194,17 +179,6 @@
             <path>
               <item name="software-fir" type="b2602c69:ProjectViewProjectNode" />
               <item name="software-fir" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="software-fir" type="b2602c69:ProjectViewProjectNode" />
-              <item name="software-fir" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="software-fir" type="b2602c69:ProjectViewProjectNode" />
-              <item name="software-fir" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -265,12 +239,12 @@
       <workItem from="1531127806045" duration="889000" />
       <workItem from="1531128716870" duration="11112000" />
       <workItem from="1531211010653" duration="4482000" />
-      <workItem from="1531474699255" duration="3291000" />
+      <workItem from="1531474699255" duration="3417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45425000" />
+    <option name="totallyTimeSpent" value="45551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-321" width="1936" height="1066" extended-state="6" />
@@ -307,7 +281,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Graph.js</url>
-          <line>250</line>
+          <line>249</line>
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="1" />
@@ -539,13 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -592,6 +559,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
         </state>
       </provider>
     </entry>
